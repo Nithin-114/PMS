@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #fff;}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+}
+
+.form {
+  margin-top: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+button[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+input:hover {
+  opacity: 0.8;
+}
+button {
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 14px 40px;
+  
+}
+
+button:hover {
+  opacity: 0.8;
+  background-color: #555555 
+}
+.popup{
+  width: 400px;
+  background: #000;
+  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0.1);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #a9a9a9;
+  visibility: hidden;
+  transition: transform 0.5s, top 0.5s;
+}
+.open-popup{
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%,-50%) scale(1);
+
+}
+.popup img{
+  width: 100px;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+button1 {
+  background-color: #555555;
+  color: #fff;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 14px 40px;
+  border-radius: 8px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Sign Up</h1>
+    
+    </div>
+    <div class="form">
+      <form action="/signup" method="post">
+        <label for="Your name"><b>Username</b></label>
+        <input type="text" name="name" placeholder="Your name" required>
+        <label for="Your email"><b>Email</b></label>
+        <input type="email" name="email" placeholder="Your email" required>
+        <label for="Your password"><b>Password</b></label>
+        <input type="password" name="password" placeholder="Your password" required>
+        </div>
+      </form>   
+       <button type="submit" class="btn" onclick="openPopup()">Sign up</button>
+      <div class="popup" id="popup">
+        <img src="ticks.jpg">
+        <h2>Congrats!</h2>
+        <p>You have been successfully Signed up!</p>
+        <button1 type="button" onclick="closePopup()">OK</button1>
+        </div>
+      <a href="login.html">
+      <center><button>Back</button></center>
+      <a align="right"   href="help.html"><h>Help?</h></a>
+      </a>
+    </div>
+  </div>
+  <script>
+    let popup = document.getElementById("popup");
+
+    function openPopup(){
+      popup.classList.add("open-popup");
+    }
+    function closePopup(){
+      popup.classList.remove("open-popup");
+    }
+
+  </script>
+</body>
+</html>

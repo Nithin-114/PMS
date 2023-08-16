@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+  body{
+    background-image: url("img.jpg.jpg");
+    background-size:cover;
+    width: 30;
+    height:40;
+
+  }
+
+  .center {
+    margin: 0%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, 50%);
+
+  }
+  button {
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 28px 80px;
+  border-radius: 14px;
+}
+
+button:hover {
+  opacity: 0.8;
+  background-color: #666}
+
+
+h1{
+  position: relative;
+  font-size: 4vw;
+  color: #002147;
+  -webkit-text-stroke: 0.3vw #002147;
+  text-transform:uppercase;
+}
+h2{
+  color:#e3dac9;
+}
+h1::before
+{
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: #e3dac9;
+  -webkit-text-stroke: 0vw #383d52;
+  border-right: 2px solid #e3dac9;
+  overflow: hidden;
+  animation: animate 9s linear infinite;
+}
+@keyframes animate
+{
+  0%,10%,100%
+  {
+    width: 0;
+  }
+  70%,90%
+  {
+    width: 100%;
+  }
+}
+   
+   </style>
+</head>
+<body>
+  <h1 data-text="PASSPORT MANAGEMENT SYSTEM....">PASSPORT MANAGEMENT SYSTEM....</h1>
+ <em> <h2 align="right">DEVOLOPED BY:<br><br>S.Nithin<br>L.Nikhil<br>N.Hemanth</h2></em>
+<a href="login.html">
+<div class="center">
+    <button >EXPLORE</button>
+</div>
+</a>
+</body>
+</html>
